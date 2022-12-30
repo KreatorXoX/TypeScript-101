@@ -89,10 +89,10 @@ class Guitarist implements Musician {
     this.instrument = instrument;
   }
 
-  play(action: string) {
+  play(action: string): string {
     return `${this.name} ${action} the ${this.instrument}`;
   }
-  stop() {
+  stop(): string {
     return `Stopping W/E ${this.name} doing`;
   }
 }
