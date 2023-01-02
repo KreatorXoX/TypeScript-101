@@ -1,19 +1,16 @@
-import Todo from '../models/todo'
-import TodoItem from './TodoItem'
+import TodoItem from "./TodoItem";
+import { useContext } from "react";
+import { TodosContext } from "../store/todos-context";
 
-type PropTodoType = {
-  items: Todo[];
-  onRemove(id:string):void;
-}
-
-const Todos = ({ items, onRemove }: PropTodoType) => {
+const Todos = () => {
+  const todosCtx = useContext(TodosContext);
   return (
-    <div className='todo__list'>
-      {items?.map((el) => (
-        <TodoItem key={el.id} item={el} remove={onRemove} />
+    <div className="todo__list">
+      {todosCtx.items?.map((el) => (
+        <TodoItem key={el.id} item={el} remove={todosCtx.removeTodo} />
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default Todos
+export default Todos;

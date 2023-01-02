@@ -91,7 +91,7 @@ input:focus {
   position: relative;
 }
 .todo__item:hover {
-  border-color: red;
+  border-color: rgb(152, 58, 58);
   cursor: pointer;
 }
 .todo__remove {
@@ -102,7 +102,9 @@ input:focus {
 }
 .todo__item:hover + .todo__remove {
   display: block;
-  color: red;
+  color: rgb(152, 58, 58);
+  font-size: 0.55rem;
+  font-weight: 400;
 }
 
 .input__field {
